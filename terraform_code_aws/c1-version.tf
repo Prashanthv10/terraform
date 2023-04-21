@@ -8,7 +8,7 @@ terraform {
   }
 }
 provider "aws" {
-  region = "southeast-2"
+  region = "ap-southeast-2"
 }
 
 resource "aws_instance" "ec2" {
