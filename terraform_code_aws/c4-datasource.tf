@@ -1,3 +1,4 @@
+
 data "aws_ami" "amznlnx" {
   most_recent      = true
   owners           = ["amazon"]
