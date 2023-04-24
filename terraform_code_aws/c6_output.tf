@@ -10,3 +10,4 @@ output "public_dns" {
 output "name" {
     value = "aws_instance.ec2.aws_ami.id"
 }
+*/
