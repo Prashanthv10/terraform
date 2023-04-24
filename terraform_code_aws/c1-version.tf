@@ -11,6 +11,7 @@ provider "aws" {
   region = "ap-southeast-2"
 }
 
+/*
 resource "aws_instance" "ec2" {
   ami           = "ami-05f998315cca9bfe3"
   instance_type = vsr.instance_type
@@ -18,3 +19,4 @@ resource "aws_instance" "ec2" {
     "name" = "ec2p"
   }
 }
+*/
