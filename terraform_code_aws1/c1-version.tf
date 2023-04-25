@@ -16,7 +16,7 @@ resource "aws_instance" "ec2" {
   ami           = "ami-05f998315cca9bfe3"
   instance_type = vsr.instance_type
   tags = {
-    "name" = "ec2p"
+    "Name" = "ec2p"
   }
 }
 */
