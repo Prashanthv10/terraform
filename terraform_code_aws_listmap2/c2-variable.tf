@@ -4,13 +4,13 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
-variable "instance_type" {
+variable "instance_list" {
   description = "instance_list"
   type = list(string)
   default = [ "t2.micro","t3.micro" ] #if variable is list put avalues inside [] brackets
 }
 
-variable "instance_type" {
+variable "instance_map" {
   description = "instance_map"
   type = map(string) #if the variables are map put inside {}
   default = {
