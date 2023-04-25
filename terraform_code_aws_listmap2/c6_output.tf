@@ -42,7 +42,7 @@ output "latest_splat_instance_publicdns" {
 
 
 output "for_loop_count" {
-    value = asw_instance.ec2[*].public_dns
+    value = aws_instance.ec2[*].public_dns
 }
 
 
