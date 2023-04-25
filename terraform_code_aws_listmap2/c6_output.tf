@@ -18,7 +18,7 @@ output "for_output_list" {
   value = [for instance in aws_instance.ec2: instance.public_dns ]
 }
 # Output - For Loop with Map
-output "For output map" {
+output "For_output_map" {
     value = {for instance in aws_instance.ec2: instance.id => instance.public_dns}
 }
 
@@ -41,7 +41,7 @@ output "latest_splat_instance_publicdns" {
 }
 
 
-output "for loop count" {
+output "for_loop_count" {
     value = asw_instance.ec2[*].public_dns
 }
 
