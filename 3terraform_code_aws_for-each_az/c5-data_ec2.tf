@@ -14,7 +14,7 @@ resource "aws_instance" "ec2" {
   instance_type = var.instance_map["dev"] #key value
   vpc_security_group_ids = [ aws_security_group.vpc-web.id, aws_security_group.vpc-ssh.id ]
   #availability_zone = "value"   #for single az
-  for_each = toset(data.aws_availability_zones.my_azones) # input values for multiple avalability zones
+  for_each = toset(data.aws_availability_zones.my_azones.names) # input values for multiple avalability zones
   availability_zone = "each.key" # for multiple avalability zones
   #count = "2"
   tags = {
