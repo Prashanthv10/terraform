@@ -17,6 +17,6 @@ output "instance_publicdns" {
 
 }# EC2 Instance Public DNS with MAPS
 output "instance_publicdns2" {
-  value = tomap({for az, ec2 in aws_instance.ec2 : az => ec2.public_dns})
+  value = tomap({for az, ec2 in aws_instance.ec2: az => ec2.public_dns})
     # az intends to be a  availability zone 
 }
