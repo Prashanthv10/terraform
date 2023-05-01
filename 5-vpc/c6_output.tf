@@ -20,3 +20,7 @@
 #   value = tomap({for az, ec2 in aws_instance.ec2: az => ec2.public_dns})
 #     # az intends to be a  availability zone 
 # }
+
+output "azname" {
+  value = "data.aws_availability_zones.example.names"
+}
