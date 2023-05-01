@@ -22,5 +22,5 @@
 # }
 
 output "azname" {
-  value = "data.aws_availability_zones.example.names"
+  value = toset(data.aws_availability_zones.example.names)
 }
