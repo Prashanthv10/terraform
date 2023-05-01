@@ -24,3 +24,7 @@
 output "azname" {
   value = toset(data.aws_availability_zones.example.names)
 }
+
+output "cidr" {
+  value = "resource.aws_subnet.public.cidr_block"
+}
