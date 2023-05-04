@@ -4,7 +4,7 @@ output "instance_publicip" {
 }
 output "instance_publicdns" {
   description = "ec2dns"
-  value = "aws_instance.ec2.public_dns"
+  #value = "aws_instance.ec2.public_dns"
   value = toset(aws_instance.ec2.public_dns)
 }
 /*
@@ -16,5 +16,5 @@ output "name" {
 # Output Legacy Splat Operator (latest) - Returns the List
 output "legacy_splat_instance_publicdns" {
   description = "Legacy Splat Expression"
-  value = aws_instance.ec2.[*].public_dns
+  value = aws_instance.ec2.public_dns
 }  
