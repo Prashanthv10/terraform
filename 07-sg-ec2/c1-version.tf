@@ -5,16 +5,18 @@ terraform {
       source = "hashicorp/aws"
       version = "3"
     }
+    null = {  
+      source = "hashicorp/null"
+      version = "~> 3.0.0"
+} 
+
   }
 }
 provider "aws" {
   region = var.aws_region
 }
 
-null = {
-  source = "hashicorp/null"
-  version = "~> 3.0.0"
-} 
+
 
 /*
 resource "aws_instance" "ec2" {
