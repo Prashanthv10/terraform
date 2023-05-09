@@ -1,4 +1,11 @@
 # VPC Name
+
+# AWS EC2 Instance Type
+variable "instance_type" {
+  description = "EC2 Instance Type"
+  type = string
+  default = "t2.micro"  
+}
 variable "vpc_name" {
   description = "VPC Name"
   type = string 
