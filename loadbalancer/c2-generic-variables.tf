@@ -9,7 +9,7 @@ variable "environment" {
   type = string
   default = "dev"
 }
-variable "business_divsion" {
+variable "business_division" {
   description = "business division"
   type = string
 default = "HR" 
