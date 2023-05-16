@@ -10,7 +10,7 @@ module "ec2-public" {
   key_name               = var.instance_keypair
   monitoring             = true
   subnet_id              = module.VPC.public_subnets[0] #subnet_id is for single subnet
-  vpc_security_group_ids = module.public-bastion-sg.this_security_group_id
+  vpc_security_group_ids = [module.public-bastion-sg.this_security_group_id]
   tags = local.common_tags
 
 }
