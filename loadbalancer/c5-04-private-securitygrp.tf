@@ -1,4 +1,4 @@
-module "private-sg " {
+module "private-sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "3.18.0"
   # insert the 2 required variables here

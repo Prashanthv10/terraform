@@ -7,6 +7,6 @@ output "private_sg_grp_id" {
 output "public_sg_grp_name" {
     value = module.public-bastion-sg.this.security.group.name
 }
-output "public_sg_grp_name" {
+output "private_sg_grp_name" {
     value = module.private-sg.this.security.group.name
 }
