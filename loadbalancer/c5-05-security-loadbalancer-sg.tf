@@ -4,7 +4,7 @@ module "security-group" {
   # insert the 2 required variables here
   name        = "loadbalancer-sg"
   description = "Security group for user-service with custom ports open within VPC, and PostgreSQL publicly open"
-  vpc_id      = module.vpc.vpc_id
+  vpc_id      = module.VPC.vpc_id
 
   ingress_cidr_blocks      = ["0.0.0.0/0"]
   ingress_rules            = ["https-80-tcp"] # we can use 12th line syntax
