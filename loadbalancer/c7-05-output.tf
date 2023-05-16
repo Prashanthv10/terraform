@@ -8,5 +8,5 @@ output "ec2-private" {
     value = module.ec2-private.id
 }
 output "ec2-private-private_ip" {
-    value = module.ec2-private.private.ip
+    value = module.ec2-private.private_ip
 }

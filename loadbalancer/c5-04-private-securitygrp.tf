@@ -4,7 +4,7 @@ module "private-sg" {
   # insert the 2 required variables here
  
  name = "private-sg"
- vpc_id = module.vpc.vpc_id
+ vpc_id = module.VPC.vpc_id
  
  ingress_rules = ["ssh-tcp","http-80-tcp"]
  ingress_ipv6_cidr_blocks = module.VPC.vpc_cidr_block #private ec2 instances are inside this sg so inbound rule applicable only for perticular vpc
