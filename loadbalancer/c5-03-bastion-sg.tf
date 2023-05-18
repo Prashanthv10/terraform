@@ -7,7 +7,7 @@ module "public-bastion-sg" {
  vpc_id = module.VPC.vpc_id
  
  ingress_rules = ["ssh-tcp"]
- ingress_ipv6_cidr_blocks = ["0.0.0.0/0"]
+ ingress_cidr_blocks = ["0.0.0.0/0"]
 
  egress_rules = ["all-all"]
 
