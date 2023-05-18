@@ -3,7 +3,7 @@ module "elb" {
   version = "2.5.0"
   # insert the 7 required variables here
   name = "${local.name}-myelb"
-  subnets = [module.VPC.public_subnets[0], module.VPC.public_subnets[1]]
+  subnets = [module.vpc.public_subnets[0], module.vpc.public_subnets[1]]
   security_groups = [module.loadbalancer-sg.this_security_group_id]
   listener = [
     {

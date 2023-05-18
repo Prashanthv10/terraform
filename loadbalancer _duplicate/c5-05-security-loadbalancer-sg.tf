@@ -4,7 +4,7 @@ module "loadbalancer-sg" {
   # insert the 2 required variables here
   name        = "loadbalancer-sg"
   description = "Security group with http port open for everybody"
-  vpc_id      = module.VPC.vpc_id
+  vpc_id      = module.vpc.vpc_id
 
   ingress_cidr_blocks      = ["0.0.0.0/0"]
   ingress_rules            = ["https-80-tcp"] # we can use 12th line syntax

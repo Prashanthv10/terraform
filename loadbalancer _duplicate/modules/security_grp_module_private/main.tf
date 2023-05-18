@@ -1,11 +1,11 @@
 resource "aws_security_group" "pprivate_sg" {
   name        = "private_sg"
   description = "Allow inbound traffic"
-  vpc_id = module.VPC.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   ingress = [
     {
-    description      = "TLS from VPC"
+    description      = "TLS from vpc"
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"

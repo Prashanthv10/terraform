@@ -1,6 +1,6 @@
 module "private-sg" {
   source  = "../modules/security_grp_module_private"
-  version = "4.0.0"
+  # version = "4.0.0"
   # insert the 2 required variables here
  
  name = "private-sg"
