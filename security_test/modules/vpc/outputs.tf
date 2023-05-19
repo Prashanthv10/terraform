@@ -582,17 +582,6 @@ output "default_vpc_main_route_table_id" {
 ################################################################################
 # VPC Flow Log
 ################################################################################
-
-output "vpc_flow_log_destination_arn" {
-  description = "The ARN of the destination for VPC Flow Logs"
-  value       = local.flow_log_destination_arn
-}
-
-output "vpc_flow_log_cloudwatch_iam_role_arn" {
-  description = "The ARN of the IAM role used when pushing logs to Cloudwatch log group"
-  value       = local.flow_log_iam_role_arn
-}
-
 ################################################################################
 # Static values (arguments)
 ################################################################################
