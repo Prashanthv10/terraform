@@ -38,7 +38,7 @@ module "vpc" {
 
 module "public-bastion-sg" {
   depends_on = [ module.vpc ]
-  source  = "./modules/public-bastion-sg"
+  source  = "./module/public-bastion-sg"
 
 # version = "4.0.0"
 # insert the 2 required variables here
@@ -51,7 +51,7 @@ module "public-bastion-sg" {
 
  module "private-sg" {
   depends_on = [ module.vpc ]
-  source  = "./modules/private-sg"
+  source  = "./module/private-sg"
   # version = "4.0.0"
   # insert the 2 required variables here
  
