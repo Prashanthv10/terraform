@@ -583,19 +583,9 @@ output "default_vpc_main_route_table_id" {
 # VPC Flow Log
 ################################################################################
 
-output "vpc_flow_log_id" {
-  description = "The ID of the Flow Log resource"
-  value       = try(aws_flow_log.this[0].id, null)
-}
-
 output "vpc_flow_log_destination_arn" {
   description = "The ARN of the destination for VPC Flow Logs"
   value       = local.flow_log_destination_arn
-}
-
-output "vpc_flow_log_destination_type" {
-  description = "The type of the destination for VPC Flow Logs"
-  value       = var.flow_log_destination_type
 }
 
 output "vpc_flow_log_cloudwatch_iam_role_arn" {
