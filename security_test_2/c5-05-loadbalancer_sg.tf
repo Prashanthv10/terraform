@@ -1,5 +1,5 @@
-module "public-bastion-sg" {
-  source  = "./modules/public-bastion-sg"
+module "loadbalancer-sg" {
+  source  = "./modules/loadbalancer-sg"
 
 # version = "4.0.0"
 # insert the 2 required variables here
