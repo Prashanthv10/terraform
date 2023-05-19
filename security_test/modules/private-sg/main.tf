@@ -1,7 +1,7 @@
 resource "aws_security_group" "private_sg" {
   name        = "private_sg"
   description = "Allow inbound traffic"
-  vpc_id = module.vpc.vpc_id
+  vpc_id = var.vpc_id
 
   ingress = [
     {
