@@ -27,6 +27,4 @@ resource "aws_security_group" "private_sg" {
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
-
-  tags = local.common_tags
 }

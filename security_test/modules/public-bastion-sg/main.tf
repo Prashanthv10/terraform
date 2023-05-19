@@ -20,5 +20,4 @@ resource "aws_security_group" "bastion_sg" {
     # ipv6_cidr_blocks = ["::/0"]
   }
 
-  tags = local.common_tags
 }
