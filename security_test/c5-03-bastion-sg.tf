@@ -1,5 +1,5 @@
 module "public-bastion-sg" {
-  source  = "./modules/security_grp_module"
+  source  = "./modules/public-bastion-sg"
 # version = "4.0.0"
 # insert the 2 required variables here
 
