@@ -38,7 +38,10 @@ module "elb" {
 
   // ELB attachments
   number_of_instances = 2
-  instances = [ module.ec2-private.ids[0]]
+  instances           = [
+      module.ec2-private.id[0],
+      module.ec2-private.id[1]
+    ]
   # instances           = [module.ec2-private.id[0],
   #  module.ec2-private.id[1]
   #  ]
