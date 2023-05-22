@@ -18,7 +18,7 @@ resource "null_resource" "name" {
   ]
   }
   provisioner "local-exec" {
-    command = "echo vpc created on 'date' VPC ID: ${module.VPC.vpc_id} >> creationtime_vpc.txt"
+    command = "echo vpc created on 'date' VPC ID: ${module.vpc.vpc_id} >> creationtime_vpc.txt"
     working_dir = "local-exec-output-files/"
   }
   ## Local Exec Provisioner:  local-exec provisioner (Destroy-Time Provisioner - Triggered during deletion of Resource)
