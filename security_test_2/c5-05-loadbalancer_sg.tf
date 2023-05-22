@@ -1,5 +1,5 @@
 module "loadbalancer-sg" {
-  source  = "./modules/loadbalancer-sg"
+  source  = "./modules/loadbalancer_sg"
 
 # version = "4.0.0"
 # insert the 2 required variables here
