@@ -38,7 +38,9 @@ module "elb" {
 
   // ELB attachments
   number_of_instances = 2
-  instances           = ["i-06ff41a77dfb5349d", "i-4906ff41a77dfb53d"]
+  instances           = [module.ec2-private.id[0],
+   module.ec2-private.id[1]
+   ]
 
   tags = local.common_tags
 }
