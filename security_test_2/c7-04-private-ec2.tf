@@ -8,7 +8,7 @@ module "ec2-private" {
   #instance count is important because ec2 will be creating in both the sunets
   instance_count         = var.private_instance_count #imp 
 
-  ami                    = ""
+  ami = data.aws_ami.amzlinux2.id
   instance_type          = var.instance_type
   key_name               = var.instance_keypair
   #monitoring             = true

@@ -5,7 +5,7 @@ module "ec2-public" {
   name = "${var.environment}-bastionHost"
 #  instance_count         = 5
 
-  ami                    = "ami-ebd02392"
+  ami = data.aws_ami.amzlinux2.id
   instance_type          = var.instance_type
   key_name               = var.instance_keypair
   # monitoring             = true
