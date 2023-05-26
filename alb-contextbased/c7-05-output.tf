@@ -15,6 +15,6 @@ output "ec2-private-private_ip" {
 output "ec2-private-app2-id" {
     value = module.ec2-private-app2.id
 }
-output "ec2-private-private_ip" {
+output "ec2-private-private-app2_ip" {
     value = module.ec2-private-app2.private_ip
 }
