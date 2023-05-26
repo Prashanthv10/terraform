@@ -1,8 +1,8 @@
 module "acm" {
   source  = "terraform-aws-modules/acm/aws"
   version = "4.3.2"
-  domain_name  = trimsuffix(data.aws_route53_zone.mydomain.id, ".")
-  zone_id      = data.aws_route53_zone.mydomain.id
+  domain_name  = trimsuffix(data.aws_route53_zone.mydomain.name, ".")
+  zone_id      = data.aws_route53_zone.mydomain.zone_id
 
   subject_alternative_names = [
     "*.testdevopsincloud.net"
