@@ -5,7 +5,7 @@ module "acm" {
   zone_id      = data.aws_route53_zone.mydomain.zone_id
 
   subject_alternative_names = [
-    "*.testdevopsincloud.com"
+    "*.testdevopsincloud.net"
   ]
 
   wait_for_validation = true

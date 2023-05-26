@@ -1,5 +1,5 @@
 data "aws_route53_zone" "mydomain" {
-  name         = "testdevopsincloud.com"
+  name         = "testdevopsincloud.net"
   # private_zone = true
 }
 output "zone_id" {
