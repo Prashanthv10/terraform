@@ -136,7 +136,7 @@ module "alb" {
     ]
 
     conditions = [{
-      path_patterns = ["/app1* "]
+      path_patterns = ["/app1*"]
     }]
   },
     {
@@ -150,7 +150,7 @@ module "alb" {
     ]
 
     conditions = [{
-      path_patterns = ["/app2* "]
+      path_patterns = ["/app2*"]
     }]
   }
   ]
