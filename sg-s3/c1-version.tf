@@ -13,8 +13,10 @@ terraform {
   }
   backend "s3" {
     bucket = "state-bucket-prash"
-    key    = "dev/project1-vpc/terraform.tfstate"
+    key    = "dev/project1-vpc2/terraform.tfstate"
     region = "ap-southeast-2"
+
+    dynamodb_table = "dev-project-vpc2"
   }
 }
 provider "aws" {

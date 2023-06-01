@@ -15,6 +15,8 @@ terraform {
     bucket = "state-bucket-prash"
     key    = "dev/project1-vpc/terraform.tfstate"
     region = "ap-southeast-2"
+
+    dynamodb_table = "dev-project-vpc"
   }
 }
 provider "aws" {

@@ -125,9 +125,10 @@ module "alb" {
   ]
   #https listeners rules
   https_listener_rules = [
+    #############rule 1
   {
     https_listener_index = 0                # '0' because we have one https listeners
-
+    priority = 1
     actions = [
       {
         type               = "forward"
@@ -136,11 +137,16 @@ module "alb" {
     ]
 
     conditions = [{
-      path_patterns = ["/app1*"]
+      http_headers = [{
+        http_header_name = "custom - header"
+        values           = ["app1", "app-1", "my-app-1"]
+      }]
     }]
   },
+  ##rule 2
     {
-    https_listener_index = 0               # '0' because we have one https listeners
+    https_listener_index = 0  
+    priority = 2             # '0' because we have one https listeners
 
     actions = [
       {
@@ -149,11 +155,55 @@ module "alb" {
       }
     ]
 
+    # conditions = [{
+    #   path_patterns = ["/app2*"]
+    #   host_headers = [var.app2_dns_name]
+    # }]
     conditions = [{
-      path_patterns = ["/app2*"]
-        host_headers = [var.app2_dns_name]
+      http_headers = [{
+        http_header_name = "custom - header"
+        values           = ["app2", "app-2", "my-app-2"]
+      }]
+    }]
+  },
+
+  ######################## rule 3 ######################
+    {
+    https_listener_index = 0
+    priority             = 3
+    actions = [{
+      type        = "redirect"
+      status_code = "HTTP_302"
+      host        = "www.youtube.com"
+      path        = "/watch"
+      query       = "v=dQw4w9WgXcQ"
+      protocol    = "HTTPS"
+    }]
+
+    conditions = [{
+      query_strings = [{
+        key   = "website"
+        value = "aws-eks"
+      }]
+    }]
+  },
+      {
+    https_listener_index = 0
+    priority             = 4
+    actions = [{
+      type        = "redirect"
+      status_code = "HTTP_302"
+      host        = "www.youtube.com"
+      path        = "/watch"
+      query       = "v=dQw4w9WgXcQ"
+      protocol    = "HTTPS"
+    }]
+
+    conditions = [{
+      host_headers = [""]
     }]
   }
+    
   ]
 
   tags = local.common_tags
