@@ -12,7 +12,7 @@ variable "vpc_name" {
 variable "vpc_availability_zones" {
   description = "az name"
   type = list(string)
-  default = [ "ap-southeast-2a", "ap-southeast-2b" ]
+  default = [ "us-east-2a", "us-east-2b" ]
 }
 variable "vpc_public_subnets" {
   description = "subnets name"
