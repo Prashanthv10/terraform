@@ -1,7 +1,8 @@
 resource "aws_security_group" "bastion_sg" {
   name        = "bastion_sg"
   description = "Allow inbound traffic"
-  vpc_id = var.vpc_id
+  # vpc_id = var.vpc_id
+  vpc_id = data.terraform_remote_state.vpc.outputs.vpc_id
 
   ingress {
     description      = "TLS from vpc"
