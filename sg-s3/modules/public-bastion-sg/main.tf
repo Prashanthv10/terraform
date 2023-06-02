@@ -8,6 +8,7 @@
 #     }
 #   }
 resource "aws_security_group" "bastion_sg" {
+  depends_on = [ data.terraform_remote_state.vpc ]
   name        = "bastion_sg"
   description = "Allow inbound traffic"
   # vpc_id = var.vpc_id
