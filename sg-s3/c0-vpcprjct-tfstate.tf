@@ -8,3 +8,6 @@ data "terraform_remote_state" "vpc" {
     }
   }
 
+output "id1" {
+  value = data.terraform_remote_state.vpc.outputs.vpc_id
+}
