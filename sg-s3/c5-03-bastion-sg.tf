@@ -1,4 +1,5 @@
 module "public-bastion-sg" {
+  depends_on = [ data.terraform_remote_state.vpc ]
   source  = "./modules/public-bastion-sg"
 
 # version = "4.0.0"
